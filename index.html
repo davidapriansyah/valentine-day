@@ -20,18 +20,20 @@
       text-align: center;
       color: #fff;
       position: relative;
-      padding: 0 1rem; /* Added padding for mobile */
+      padding: 2rem 1rem;
+      border-radius: 15px;
+      background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background for better text visibility */
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin: 0;
-      text-shadow: 2px 2px 5px #d92e5a;
+      text-shadow: 3px 3px 6px #d92e5a;
       animation: fadeIn 3s ease-in-out;
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       margin-top: 1rem;
       animation: fadeIn 4s ease-in-out;
     }
@@ -47,32 +49,32 @@
 
     .heart {
       position: absolute;
-      width: 20px;
-      height: 20px;
+      width: 15px;
+      height: 15px;
       background-color: #d92e5a;
       transform: rotate(45deg);
-      animation: float 5s ease-in infinite;
-      opacity: 0.8;
+      animation: float 6s ease-in infinite;
+      opacity: 0.7;
     }
 
     .heart::before,
     .heart::after {
       content: '';
       position: absolute;
-      width: 20px;
-      height: 20px;
+      width: 15px;
+      height: 15px;
       background-color: #d92e5a;
       border-radius: 50%;
     }
 
     .heart::before {
-      top: -10px;
+      top: -7.5px;
       left: 0;
     }
 
     .heart::after {
       top: 0;
-      left: -10px;
+      left: -7.5px;
     }
 
     @keyframes float {
@@ -100,14 +102,14 @@
       }
 
       .heart {
-        width: 15px;
-        height: 15px;
+        width: 12px;
+        height: 12px;
       }
 
       .heart::before,
       .heart::after {
-        width: 15px;
-        height: 15px;
+        width: 12px;
+        height: 12px;
       }
     }
   </style>
@@ -125,16 +127,16 @@
         const heart = document.createElement('div');
         heart.classList.add('heart');
         heart.style.left = Math.random() * 100 + 'vw';
-        heart.style.animationDuration = Math.random() * 3 + 3 + 's';
+        heart.style.animationDuration = Math.random() * 3 + 4 + 's';
         container.appendChild(heart);
 
         setTimeout(() => {
           heart.remove();
-        }, 5000);
+        }, 6000);
       }
     }
 
-    setInterval(createHearts, 800);
+    setInterval(createHearts, 1000);
   </script>
 </body>
 </html>
